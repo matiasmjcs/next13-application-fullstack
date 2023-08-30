@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 interface IUser {
   email: string
@@ -22,6 +23,7 @@ const SingUp = () => {
   }
   return (
     <main className="p-4 text-black">
+       <h4 className='text-2xl text-white font-bold text-center'>SingUp</h4>
       <form className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
         <label htmlFor="username" className="block font-semibold mb-1">username</label>
         <input
@@ -50,6 +52,7 @@ const SingUp = () => {
         <button onClick={singUp} className="w-full bg-blue-500 text-white font-semibold py-2 mt-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
           SingUp
         </button>
+      <Link className='p-2 text-black text-center' href={'/login'}>Already have an account? Log in here</Link>
       </form>
     </main>
 
